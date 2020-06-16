@@ -7,7 +7,8 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
   styleUrls: ['./sign-up-volunteer.component.css']
 })
 export class SignUpVolunteerComponent implements OnInit {
-  signUpType = "volunteer";
+  signUpHeader = "sign up as volunteer";
+  signUpType = "sign up";
 
   constructor() { }
 

@@ -7,37 +7,9 @@
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-
-          <!-- Slide 1 -->
-<!--          <app-slide *ngFor="let slidePath of slidesPaths; index as i;" [imgPath]="slidePath" [index]="index"></app-slide>-->
           <div *ngFor="let slide of slides; index as i;">
             <app-slide [imgPath]="slide.url" [selected]="slide.selected"></app-slide>
           </div>
-
-<!--          &lt;!&ndash; Slide 2 &ndash;&gt;-->
-<!--          <div class="carousel-item">-->
-<!--            <div class="carousel-background"><img class="slide-size" src="assets/img/slide/slide-2.jpg" alt=""></div>-->
-<!--            <div class="carousel-container">-->
-<!--              <div class="carousel-content">-->
-<!--                <h2 class="animated fadeInDown">Botzi</h2>-->
-<!--                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>-->
-<!--                <a href="#about" class="btn-get-started scrollto animated fadeInUp">Read More</a>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-
-<!--          &lt;!&ndash; Slide 3 &ndash;&gt;-->
-<!--          <div class="carousel-item">-->
-<!--            <div class="carousel-background"><img class="slide-size" src="assets/img/slide/slide-3.jpg" alt=""></div>-->
-<!--            <div class="carousel-container">-->
-<!--              <div class="carousel-content">-->
-<!--                <h2 class="animated fadeInDown">Botzi</h2>-->
-<!--                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>-->
-<!--                <a href="#about" class="btn-get-started scrollto animated fadeInUp">Read More</a>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-
         </div>
 
         <a class="carousel-control-prev" (click)="slide(-1)" role="button" data-slide="prev">
