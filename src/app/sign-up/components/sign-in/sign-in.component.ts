@@ -8,7 +8,7 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
 })
 export class SignInComponent implements OnInit {
   signUpHeader = "Log In";
-  signUpType = "Log In";
+  signUpType = "log in";
 
   constructor() { }
 
