@@ -9,15 +9,19 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SignUpOrganizationComponent } from './components/sign-up-organization/sign-up-organization.component';
 import { SignUpVolunteerComponent } from './components/sign-up-volunteer/sign-up-volunteer.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { VolunteerAreasComponent } from './components/volunteer-areas/volunteer-areas.component';
 
 const routes: Routes = [
   {path: 'login', component: SignInComponent},
+  {path: 'skills', component: SkillsComponent},
   {path: 'sign-up',
   //component: SignUpComponent,
   //canActivate[AuthGuard],
   children: [
     {path: 'organization', component: SignUpOrganizationComponent},
-    {path: 'volunteer', component: SignUpVolunteerComponent},
+    {path: 'volunteer', component: SignUpVolunteerComponent}
+    
   ]}
 ];
 
@@ -33,7 +37,9 @@ const routes: Routes = [
     SignUpComponent,
     SignUpOrganizationComponent,
     SignUpVolunteerComponent,
-    SignInComponent
+    SignInComponent,
+    SkillsComponent,
+    VolunteerAreasComponent
   ],
   exports: [
     SignUpComponent,
@@ -41,3 +47,4 @@ const routes: Routes = [
   ]
 })
 export class SignUpModule { }
+export const routingComponents =[SkillsComponent]

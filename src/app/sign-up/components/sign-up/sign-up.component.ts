@@ -45,7 +45,16 @@ export class SignUpComponent implements OnInit {
   }
 
   account = {};
-
+submitSignUp(){
+    var volunteerEmail=(document.getElementById("email") as HTMLInputElement).value;
+    var volunteerPassword=( document.getElementById("password") as HTMLInputElement).value;
+    firebase.auth().createUserWithEmailAndPassword(volunteerEmail, volunteerPassword).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
+  }
   submitLogin() {
     console.log("submit login to facebook");
     var provider = new firebase.auth.FacebookAuthProvider();
@@ -56,6 +65,8 @@ export class SignUpComponent implements OnInit {
       var user = result.user;
       this.router.navigate(['/']);
       // ...
+      console.log("success");
+
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
