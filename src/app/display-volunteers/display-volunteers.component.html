@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row content">
+    <div class="col-lg-6">
+      <h2>{{ "volunteers whom registeres to  " + task + " task"}} </h2>
+      <br/>
+      <br/>
+      <ul style="list-style: none;">
+        <li *ngFor="let volunteer of volunteersList">
+          <app-volunteers [volunteer] = "volunteer"></app-volunteers>
+          <br/>
+          <br/>
+        </li>      
+      </ul>
+
+</div>
+</div>
+</div>
