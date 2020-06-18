@@ -8,25 +8,6 @@ import { auth } from 'firebase/app';
 
 declare var FB: any;
 
-// Firebase App (the core Firebase SDK) is always required and
-// must be listed before other Firebase SDKs
-var firebase = require("firebase/app");
-
-// Add the Firebase products that you want to use
-require("firebase/auth");
-require("firebase/firestore");
-var firebaseConfig = {
-  apiKey: "AIzaSyBZJI-R8jesec4R4H8OyElRNYsc5IGpPQM",
-  authDomain: "botzi-19152.firebaseapp.com",
-  databaseURL: "https://botzi-19152.firebaseio.com",
-  projectId: "botzi-19152",
-  storageBucket: "botzi-19152.appspot.com",
-  messagingSenderId: "121889252544",
-  appId: "1:121889252544:web:a202c9bf93e5f439d53925",
-  measurementId: "G-HWZR120LVX"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
 @Component({
   selector: 'app-sign-up',
