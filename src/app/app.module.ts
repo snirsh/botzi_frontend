@@ -1,5 +1,8 @@
+import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+
+
 
 import { NgModule } from '@angular/core';
 
@@ -11,9 +14,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 
+
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
-
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}
 ];
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    ContactComponentComponent
   ],
   imports: [
     BrowserModule,
