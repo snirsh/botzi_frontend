@@ -1,4 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AngularFireAuthModule, AngularFireAuth } from  'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
+import { Router } from '@angular/router';
+import * as firebase from 'firebase';
+import { auth } from 'firebase/app';
+
 declare var FB: any;
 
 // Firebase App (the core Firebase SDK) is always required and
@@ -29,8 +36,9 @@ firebase.initializeApp(firebaseConfig);
 export class SignUpComponent implements OnInit {
   @Input() signUpType: string;
   @Input() signUpHeader: string;
+  error: any;
 
-  constructor() { }
+  constructor(public af: AngularFireAuth,private router: Router) { }
 
 
   ngOnInit() {
@@ -57,26 +65,26 @@ export class SignUpComponent implements OnInit {
 
   account = {};
 
-  submitLogin(){
-        console.log("submit login to facebook");
-        //FB.login();
-        FB.login((response)=>
-            {
-              console.log('submitLogin',response);
-              if (response.authResponse)
-              {
-                //login success    
-                console.log('Login succesfully');            
-                //login success code here
-                //redirect to home page
-                document.location.href="/";
-               }
-               else
-               {
-               console.log('User login failed');
-             }
-          });
-
-      }
+  submitLogin() {
+    console.log("submit login to facebook");
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      this.router.navigate(['/']);
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+    }
 
 }
