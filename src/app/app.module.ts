@@ -19,6 +19,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
+import { DisplayMatchesComponent } from './display-matches/display-matches.component';
+import { AvailableMatchComponent } from './available-match/available-match.component';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}
 ];
@@ -40,7 +42,9 @@ export const firebaseConfig = {
     HomeComponent,
     AboutComponent,
     NavMenuComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    DisplayMatchesComponent,
+    AvailableMatchComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,7 @@ export const firebaseConfig = {
   providers: [
     AuthService, AuthGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [DisplayMatchesComponent, AvailableMatchComponent]
 })
 export class AppModule { }
