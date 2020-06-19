@@ -6,12 +6,15 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from  'angularfire2/auth';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { OrganizationProfileComponent} from './components/organization-profile/organization-profile.component';
 import { VolunteerProfileComponent} from './components/volunteer-profile/volunteer-profile.component';
 import { SkillsComponent} from './sign-up/components/skills/skills.component';
 import { VolunteerAreasComponent} from './sign-up/components/volunteer-areas/volunteer-areas.component';
 
 import {OurTeamComponent } from './our-team/our-team.component';
+=======
+>>>>>>> parent of 699453b... added CampaignList copmonent (named display-matches its on the main screen so you should see it first
 =======
 >>>>>>> parent of 699453b... added CampaignList copmonent (named display-matches its on the main screen so you should see it first
 
