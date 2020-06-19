@@ -1,11 +1,22 @@
-<div class="icon-box">
-  <h4>
-  <a href="#">{{match.topic}} </a>
-  </h4>
-  <br/>
-  <p>{{"description: " + match.description}}</p>
-  <p>{{"date: " + match.date}}</p>
-  <input type="checkbox" class="icon-box">
 
+  <div class="background">
+    <div class="container">
+      <div class="panel pricing-table">
+     
+        
+        <div class="pricing-plan">
+          <h2 class="pricing-header">{{ campaign.campaignName }}</h2>
+          <ul class="pricing-features">
+            <li class="pricing-features-item">{{ campaign.campaignID }}</li>
+            <li class="pricing-features-item">{{campaign.cText}}</li>
+            <li class="pricing-features-item">{{campaign.city}}</li>
+          </ul>
+          <span class="pricing-price">{{ campaign.startDate + " - " + campaign.endDate}}</span>
+        </div>
+        
+     
+        
+      </div>
+    </div>
   </div>
   
