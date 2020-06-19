@@ -1,10 +1,10 @@
+import { Campaign } from './Capmaign';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from  'angularfire2/auth';
-
 
 import { NgModule } from '@angular/core';
 
