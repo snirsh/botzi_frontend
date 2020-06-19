@@ -1,3 +1,4 @@
+import { Campaign } from './Capmaign';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,7 @@ import { SkillsComponent} from './sign-up/components/skills/skills.component';
 import { VolunteerAreasComponent} from './sign-up/components/volunteer-areas/volunteer-areas.component';
 
 import {OurTeamComponent } from './our-team/our-team.component';
+
 import { NgModule } from '@angular/core';
 
 import { HomeSlidesModule } from './home-slides/home-slides.module';

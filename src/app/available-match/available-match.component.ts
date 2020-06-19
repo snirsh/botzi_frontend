@@ -1,3 +1,4 @@
+import { Campaign } from './../Capmaign';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./available-match.component.css']
 })
 export class AvailableMatchComponent implements OnInit {
-  @Input() public match:any;
-  constructor() { }
+  @Input() public campaign:Campaign;
+
 
   ngOnInit() {
   }

@@ -2,12 +2,11 @@
 <div class="container">
   <div class="row content">
     <div class="col-lg-6">
-      <h2>{{ "Welcome " + userName + " Here are matching tasks for your profile"}} </h2>
       <br/>
       <br/>
       <ul style="list-style: none;">
-        <li *ngFor="let match of matchesList">
-          <app-available-match [match] = "match"></app-available-match>
+        <li *ngFor="let campaign of campaignsList">
+          <app-available-match [campaign] = "campaign"></app-available-match>
           <br/>
           <br/>
         </li>      
