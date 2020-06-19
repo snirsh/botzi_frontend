@@ -5,7 +5,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from  'angularfire2/auth';
 
+import { OrganizationProfileComponent} from './components/organization-profile/organization-profile.component';
+import { VolunteerProfileComponent} from './components/volunteer-profile/volunteer-profile.component';
+import { SkillsComponent} from './sign-up/components/skills/skills.component';
+import { VolunteerAreasComponent} from './sign-up/components/volunteer-areas/volunteer-areas.component';
 
+import {OurTeamComponent } from './our-team/our-team.component';
 import { NgModule } from '@angular/core';
 
 import { HomeSlidesModule } from './home-slides/home-slides.module';
@@ -44,7 +49,13 @@ export const firebaseConfig = {
     NavMenuComponent,
     ContactComponentComponent,
     DisplayMatchesComponent,
-    AvailableMatchComponent
+    AvailableMatchComponent,
+    OurTeamComponent,
+    OrganizationProfileComponent,
+    VolunteerProfileComponent,
+    SkillsComponent,
+    VolunteerAreasComponent
+    
   ],
   imports: [
     BrowserModule,
